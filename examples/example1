@@ -1,0 +1,14 @@
+source {
+	abc
+
+	{
+		if (cond) {
+			puts "true"
+		} else {
+			puts "false"
+		}
+	}
+
+} () {
+
+}
