@@ -1,24 +1,5 @@
 [
   {
-    "type": "line",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "newline",
-          "named": true
-        },
-        {
-          "type": "scope",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "scope",
     "named": true,
     "fields": {},
@@ -27,7 +8,7 @@
       "required": false,
       "types": [
         {
-          "type": "line",
+          "type": "scope",
           "named": true
         }
       ]
@@ -42,7 +23,7 @@
       "required": false,
       "types": [
         {
-          "type": "line",
+          "type": "scope",
           "named": true
         }
       ]
@@ -63,10 +44,6 @@
   {
     "type": "]",
     "named": false
-  },
-  {
-    "type": "newline",
-    "named": true
   },
   {
     "type": "{",

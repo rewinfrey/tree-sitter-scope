@@ -5,53 +5,32 @@
       "type": "REPEAT",
       "content": {
         "type": "SYMBOL",
-        "name": "line"
-      }
-    },
-    "line": {
-      "type": "PREC_RIGHT",
-      "value": 0,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "REPEAT1",
-            "content": {
-              "type": "SYMBOL",
-              "name": "scope"
-            }
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "newline"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          }
-        ]
+        "name": "scope"
       }
     },
     "scope": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_curl_scope"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_paren_scope"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_bracket_scope"
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_curl_scope"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_paren_scope"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_bracket_scope"
+            }
+          ]
         }
-      ]
+      }
     },
     "_curl_scope": {
       "type": "PREC_LEFT",
@@ -67,7 +46,7 @@
             "type": "REPEAT",
             "content": {
               "type": "SYMBOL",
-              "name": "line"
+              "name": "scope"
             }
           },
           {
@@ -91,7 +70,7 @@
             "type": "REPEAT",
             "content": {
               "type": "SYMBOL",
-              "name": "line"
+              "name": "scope"
             }
           },
           {
@@ -115,7 +94,7 @@
             "type": "REPEAT",
             "content": {
               "type": "SYMBOL",
-              "name": "line"
+              "name": "scope"
             }
           },
           {
@@ -129,57 +108,12 @@
   "extras": [
     {
       "type": "PATTERN",
-      "value": "\\s"
-    },
-    {
-      "type": "PATTERN",
       "value": "[^{}()\\[\\]]+"
     }
   ],
   "conflicts": [],
   "precedences": [],
-  "externals": [
-    {
-      "type": "SYMBOL",
-      "name": "newline"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "indent"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "dedent"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "string_start"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "string_content"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "string_end"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "comment"
-    },
-    {
-      "type": "STRING",
-      "value": "]"
-    },
-    {
-      "type": "STRING",
-      "value": ")"
-    },
-    {
-      "type": "STRING",
-      "value": "}"
-    }
-  ],
+  "externals": [],
   "inline": [],
   "supertypes": []
 }
