@@ -1,0 +1,115 @@
+=============
+Simple scopes
+=============
+
+function () {
+}
+
+[
+a,
+b,
+c,
+]
+
+if (cond) {
+  true
+} else {
+  false
+}
+
+---
+
+(source_file
+      (scope)
+      (scope)
+      (scope)
+      (scope)
+      (scope)
+      (scope))
+
+=============
+Nested scopes
+=============
+
+function () {
+  function() {
+    function() {
+      function () {
+      }
+    }
+  }
+}
+
+[
+  [
+    [
+      [
+      ]
+    ]
+  ]
+]
+
+(
+  (
+    (
+     (
+     )
+    )
+  )
+)
+
+---
+
+(source_file
+  (scope)
+  (scope
+    (scope)
+    (scope
+      (scope)
+      (scope
+        (scope)
+        (scope))))
+  (scope
+    (scope
+      (scope
+        (scope))))
+  (scope
+    (scope
+      (scope
+        (scope)))))
+
+===================
+Nested mixed scopes
+===================
+
+class A {
+  function () {
+    if (cond) {
+      bar()
+    } else {
+      a = baz()
+      return [a]
+    }
+
+    return [
+      d,
+      c,
+      b,
+      a,
+    ]
+  }
+}
+
+---
+
+(source_file
+  (scope
+    (scope)
+    (scope
+      (scope)
+      (scope
+        (scope))
+      (scope
+        (scope)
+        (scope))
+      (scope))))
