@@ -50,21 +50,21 @@ Nested scopes maintain a clear and correct parent / child relationship:
 Produces the tree:
 
 ```
-(source_file     // the entire file
-  (scope         // line 1| class A {
-    (scope)      // line 2| function ()
-    (scope       // line 2| { ...
-      (scope)    // line 3| if (cond)
-      (scope     // line 3| { ...
-        (scope)  // line 4| bar()
-      )          // line 5| }
-      (scope     // line 5| else {
-        (scope)  // line 6| baz()
-        (scope)  // line 7| [a]
-      )          // line 8| }
-      (scope)    // line 10-15| [...]
-    )            // } end of function
-  )              // } end of class
+(source_file     // start of file
+  (scope         // line     1| From the `{` in `class A {`
+    (scope)      // line     2| From the `()` in `function () {`
+    (scope       // line     2| From the `{` in `function () {`
+      (scope)    // line     3| From the `()` in `if (cond) {`
+      (scope     // line     3| From the `{` in `if (cond) {`
+        (scope)  // line     4| From the `()` in `bar()`
+      )          // line     5| From the `}` in `} else {`
+      (scope     // line     5| From the `{` in `} else {`
+        (scope)  // line     6| From the `()` in `a = baz()`
+        (scope)  // line     7| From the `[]` in return `[a]`
+      )          // line     8| } end of if statement
+      (scope)    // line 12-15| From the `[]` in `return [d,c,b,a]`
+    )            // line    16| } end of function
+  )              // line    17| } end of class
 )                // end of file
 ```
 
