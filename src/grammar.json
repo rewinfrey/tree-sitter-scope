@@ -18,7 +18,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_curl_scope"
+              "name": "_curly_scope"
             },
             {
               "type": "SYMBOL",
@@ -32,7 +32,7 @@
         }
       }
     },
-    "_curl_scope": {
+    "_curly_scope": {
       "type": "PREC_LEFT",
       "value": 1,
       "content": {

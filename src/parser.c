@@ -25,7 +25,7 @@ enum {
   anon_sym_RBRACK = 6,
   sym_source_file = 7,
   sym_scope = 8,
-  sym__curl_scope = 9,
+  sym__curly_scope = 9,
   sym__paren_scope = 10,
   sym__bracket_scope = 11,
   aux_sym_source_file_repeat1 = 12,
@@ -42,7 +42,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_RBRACK] = "]",
   [sym_source_file] = "source_file",
   [sym_scope] = "scope",
-  [sym__curl_scope] = "_curl_scope",
+  [sym__curly_scope] = "_curly_scope",
   [sym__paren_scope] = "_paren_scope",
   [sym__bracket_scope] = "_bracket_scope",
   [aux_sym_source_file_repeat1] = "source_file_repeat1",
@@ -59,7 +59,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_RBRACK] = anon_sym_RBRACK,
   [sym_source_file] = sym_source_file,
   [sym_scope] = sym_scope,
-  [sym__curl_scope] = sym__curl_scope,
+  [sym__curly_scope] = sym__curly_scope,
   [sym__paren_scope] = sym__paren_scope,
   [sym__bracket_scope] = sym__bracket_scope,
   [aux_sym_source_file_repeat1] = aux_sym_source_file_repeat1,
@@ -103,7 +103,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym__curl_scope] = {
+  [sym__curly_scope] = {
     .visible = false,
     .named = true,
   },
@@ -230,7 +230,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [1] = {
     [sym_source_file] = STATE(18),
     [sym_scope] = STATE(8),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(8),
@@ -242,7 +242,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [2] = {
     [sym_scope] = STATE(2),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(2),
@@ -256,7 +256,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACK] = ACTIONS(11),
   },
   [3] = {
-    [sym__curl_scope] = STATE(4),
+    [sym__curly_scope] = STATE(4),
     [sym__paren_scope] = STATE(4),
     [sym__bracket_scope] = STATE(4),
     [aux_sym_scope_repeat1] = STATE(4),
@@ -269,7 +269,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACK] = ACTIONS(22),
   },
   [4] = {
-    [sym__curl_scope] = STATE(4),
+    [sym__curly_scope] = STATE(4),
     [sym__paren_scope] = STATE(4),
     [sym__bracket_scope] = STATE(4),
     [aux_sym_scope_repeat1] = STATE(4),
@@ -283,7 +283,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [5] = {
     [sym_scope] = STATE(9),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(9),
@@ -295,7 +295,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [6] = {
     [sym_scope] = STATE(10),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(10),
@@ -307,7 +307,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [7] = {
     [sym_scope] = STATE(11),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(11),
@@ -319,7 +319,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [8] = {
     [sym_scope] = STATE(2),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(2),
@@ -331,7 +331,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [9] = {
     [sym_scope] = STATE(2),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(2),
@@ -343,7 +343,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [10] = {
     [sym_scope] = STATE(2),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(2),
@@ -355,7 +355,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [11] = {
     [sym_scope] = STATE(2),
-    [sym__curl_scope] = STATE(3),
+    [sym__curly_scope] = STATE(3),
     [sym__paren_scope] = STATE(3),
     [sym__bracket_scope] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(2),
@@ -460,10 +460,10 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [43] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
   [45] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
   [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(17),
-  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__curl_scope, 2),
+  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__curly_scope, 2),
   [51] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__paren_scope, 2),
   [53] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__bracket_scope, 2),
-  [55] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__curl_scope, 3),
+  [55] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__curly_scope, 3),
   [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__paren_scope, 3),
   [59] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__bracket_scope, 3),
   [61] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
