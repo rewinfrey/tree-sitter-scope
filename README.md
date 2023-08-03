@@ -17,8 +17,10 @@ if (cond) { ... }
 Are parsed as separate nodes:
 
 ```
+(source_file
   (scope) // signifies the `(cond)` of the `if (cond)`.
   (scope) // signifies the `{ ... }` of the `if (cond) { ... }`.
+)
 ```
 
 However, every scope is associated with a range of line start and line end and column start and column end, which allows for convenient post processing of the tree nodes if desired for the use case.
@@ -68,7 +70,7 @@ Produces the tree:
 
 ### Usage
 
-This can be useful for generic parsing of a programming language source files for languages using curly braces to denote scopes.
+This can be useful for generic parsing of programming language source files for languages using curly braces to denote scopes.
 
 For example, understanding where enclosing pairs of `{ ... }` in any source file can serve as a useful proxy for identifying key syntax elements like function definitions, class bodies, or control flow statements.
 
